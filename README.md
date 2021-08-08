@@ -34,4 +34,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.html)
