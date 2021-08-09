@@ -20,8 +20,8 @@ El contenido y la propiedad intelectual de la solución presentada, nos correspo
 ### Instalacion
 ---
 #### Particionado de discos
-Colocar Imagen de particion de discos creada
-
+De esta manera se realiza el particionado
+![CentOS Particionado](img/CentOS_Particionado.png)
 
 #### Actualizacion de paquetes
 ---
@@ -37,8 +37,8 @@ sudo dnf upgrade
 ### Instalacion
 ---
 #### Particionado de discos
-Colocar Imagen de particion de discos creada
-
+De esta manera se realiza el particionado
+![Ubuntu Particionado](img/Ubuntu_Particionado.png)
 
 ## Servidor Ansible
 ---
@@ -90,19 +90,11 @@ sudo dnf install ansible -y
 
 ```
 
----
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
 
 ## Usage
+---
 
-```
-
-## Contributing
+## Contribuciones
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
