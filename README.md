@@ -13,22 +13,18 @@ El contenido y la propiedad intelectual de la solución presentada, nos correspo
                 Carlos A. Marval                                              Juan Pablo Trinchitella
 
 # Introducción
-
+---
 
 ## Servidor CentOS
-
+---
 ### Instalacion
+---
+#### Particionado de discos
+Colocar Imagen de particion de discos creada
 
-## Servidor Ubuntu
-
-### Instalacion
-
-## Servidor Ansible
-
-### Instalacion
 
 #### Actualizacion de paquetes
-
+---
 -Actualizacion de paquetes
 ```bash
 sudo dnf upgrade
@@ -36,8 +32,28 @@ sudo dnf upgrade
 ```
 
 
-#### Creacion de clave publica y privada
+## Servidor Ubuntu
+---
+### Instalacion
+---
+#### Particionado de discos
+Colocar Imagen de particion de discos creada
 
+
+## Servidor Ansible
+---
+### Instalacion
+---
+#### Actualizacion de paquetes
+---
+-Actualizacion de paquetes
+```bash
+sudo dnf upgrade
+
+```
+
+#### Creacion de clave publica y privada
+---
 -Crear el par de claves
 ```bash
 ssh-keygen
@@ -52,7 +68,7 @@ ssh-copy-id ansible@DireccioIP
 ```
 
 #### Instalacion de paquetes
-
+---
 -Instalar repositorio EPEL
 ```bash
 sudo dnf install epel-release -y
@@ -74,6 +90,7 @@ sudo dnf install ansible -y
 
 ```
 
+---
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
