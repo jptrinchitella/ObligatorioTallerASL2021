@@ -15,17 +15,68 @@ El contenido y la propiedad intelectual de la solución presentada, nos correspo
 # Introducción
 
 
-# Servidor CentOS
+## Servidor CentOS
 
-## Instalacion
+### Instalacion
 
-# Servidor Ubuntu
+## Servidor Ubuntu
 
-## Instalacion
+### Instalacion
 
-# Servidor Ansible
+## Servidor Ansible
 
-## Instalacion
+### Instalacion
+
+#### Actualizacion de paquetes
+
+-Actualizacion de paquetes
+```bash
+sudo dnf upgrade
+
+```
+
+
+#### Creacion de clave publica y privada
+
+-Crear el par de claves
+```bash
+ssh-keygen
+
+```
+-Copiar el contenido de la clave publica y agregarla al usuario de GitHub con el mail correspondiente
+
+-Copiar la clave publica en los diferentes servidores el cual se va a conectar el controlador
+```bash
+ssh-copy-id ansible@DireccioIP
+
+```
+
+#### Instalacion de paquetes
+
+-Instalar repositorio EPEL
+```bash
+sudo dnf install epel-release -y
+
+```
+-Descarga y almacena en caché metadatos para repositorios habilitados 
+```bash
+sudo dnf makecache
+
+```
+-Instalar el paquete Git
+```bash
+sudo dnf install git -y
+
+```
+-Instalar Ansible
+```bash
+sudo dnf install ansible -y
+
+```
+
+
+
+
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
