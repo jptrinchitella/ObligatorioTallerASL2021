@@ -21,3 +21,4 @@
 - name: Start the chrony service
   service: name=chronyd state=started enabled=yes
   tags: chrony
+
