@@ -116,7 +116,7 @@ ansible -i IP_HOST_A,IP_HOST_B, all -m setup
 ---
 - Estructura de directorios Ansible
 ```bash
-ansible.cfg
+├── ansible.cfg
 ├── group_vars
 │   ├── all
 │   ├── centos
@@ -124,6 +124,7 @@ ansible.cfg
 │   └── ubuntu
 ├── img
 │   ├── CentOS_Particionado.png
+│   ├── ControladoraPlaybook.png
 │   └── Ubuntu_Particionado.png
 ├── inventario
 ├── LICENSE
@@ -150,14 +151,17 @@ ansible.cfg
 │   │       └── my.cnf.j2
 │   └── web
 │       ├── tasks
-│       │   ├── copy_code.yml
-│       │   ├── install_httpd.yml
+│       │   ├── copy_code_centos.yml
+│       │   ├── copy_code_ubuntu.yml
+│       │   ├── install_httpd_centos.yml
+│       │   ├── install_httpd_ubuntu.yml
 │       │   └── main.yml
 │       └── templates
 │           └── index.php.j2
-└── site.ymlmp/
+└── site.yml
 
 ```
+
 ### Ejecuntando playbook
 
 De este modo se muestra los resultados que debuele el Playbook ejecutado
