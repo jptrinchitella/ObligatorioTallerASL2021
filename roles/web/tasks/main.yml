@@ -1,4 +1,10 @@
 ---
-- include: install_httpd.yml
-- include: copy_code.yml
+# This pks file for roles/lamp
+# #
+- include: install_httpd_ubuntu.yml
+- include: copy_code_ubuntu.yml
+  when: ansible_os_family == "Debian"
 
+- include: install_httpd_centos.yml
+- include: copy_code_centos.yml
+  when: ansible_os_family == "RedHat"
