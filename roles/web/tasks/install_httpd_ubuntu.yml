@@ -13,15 +13,15 @@
   loop:
    - git
 
-- name: Start firewalld
-  service: name=firewalld state=started enabled=yes
+- name: Start ufw
+  service: name=ufwd state=started enabled=yes
 
-- name: insert firewalld rule for httpd
-  firewalld: port={{ httpd_port }}/tcp permanent=true state=enabled immediate=yes
+- name: insert ufw rule for httpd
+  ufw: rule=allow port={{ httpd_port }} proto=tcp
 
 - name: http service state
-  service: name=httpd state=started enabled=yes
+  service: name=ufwd state=started enabled=yes
 
-- name: Configure SELinux to allow httpd to connect to remote database
-  seboolean: name=httpd_can_network_connect_db state=true persistent=yes
+ #- name: Configure SELinux to allow httpd to connect to remote database
+ # seboolean: name=httpd_can_network_connect_db state=true persistent=yes
   
