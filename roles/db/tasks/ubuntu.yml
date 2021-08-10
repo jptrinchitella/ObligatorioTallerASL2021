@@ -28,18 +28,18 @@
   service: name=mariadb state=started enabled=yes
 
 - name: Allow everything and enable UFW
-  ufw:
-    state: enabled
-    policy: allow
+  ufw: state=enabled policy=allow
+#    state: enabled
+#    policy: allow
 
 #- name: Start ufw
 #  service: name=ufw state=started enabled=yes
 
-- name: Allow all access to tcp port 80
-  ufw:
-    rule: allow
-    port: {{ mysql_port }}
-    proto: tcp
+- name: Allow all access to tcp port MySql
+  ufw: rule=allow port={{ mysql_port }} proto=tcp
+#    rule: allow
+#    port: {{ mysql_port }}
+#   proto: tcp
 
 #- name: insert ufw rule
 #  ufw: port={{ mysql_port }}/tcp permanent=true state=enabled immediate=yes
