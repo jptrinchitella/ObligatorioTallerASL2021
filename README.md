@@ -115,7 +115,7 @@ ansible -i IP_HOST_A,IP_HOST_B, all -m setup
 ---
 - Estructura de directorios Ansible
 ```bash
-lansible.cfg
+ansible.cfg
 ├── group_vars
 │   ├── all
 │   ├── centos
