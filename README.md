@@ -25,7 +25,7 @@ De esta manera se realiza el particionado
 
 #### Actualizacion de paquetes
 ---
--Actualizacion de paquetes
+- Actualizacion de paquetes
 ```bash
 sudo dnf upgrade
 
@@ -46,7 +46,7 @@ De esta manera se realiza el particionado
 ---
 #### Actualizacion de paquetes
 ---
--Actualizacion de paquetes
+- Actualizacion de paquetes
 ```bash
 sudo dnf upgrade
 
@@ -54,38 +54,45 @@ sudo dnf upgrade
 
 #### Creacion de clave publica y privada
 ---
--Crear el par de claves
+- Crear el par de claves
 ```bash
 ssh-keygen
 
 ```
--Copiar el contenido de la clave publica y agregarla al usuario de GitHub con el mail correspondiente
+- Copiar el contenido de la clave publica y agregarla al usuario de GitHub con el mail correspondiente
 
--Copiar la clave publica en los diferentes servidores el cual se va a conectar el controlador
+- Copiar la clave publica en los diferentes servidores el cual se va a conectar el controlador
 ```bash
 ssh-copy-id ansible@DireccioIP
 
 ```
+- Ejecutar los siguientes comandos, para que los servidores no pidan contraseña cada vez que se corra un playbook en Ansible
+```bash
+eval $(ssh-agent)
+
+ssh-add
+
+``
 
 #### Instalacion de paquetes
 ---
--Instalar repositorio EPEL
+- Instalar repositorio EPEL
 ```bash
 sudo dnf install epel-release -y
 
 ```
--Descarga y almacena en caché metadatos para repositorios habilitados 
+- Descarga y almacena en caché metadatos para repositorios habilitados 
 ```bash
 sudo dnf makecache
 
 ```
--Instalar el paquete Git
+- Instalar el paquete Git
 ```bash
 sudo dnf install git -y
 
 ```
 
--Instalar Ansible
+- Instalar Ansible
 ```bash
 sudo dnf install ansible -y
 
@@ -93,12 +100,12 @@ sudo dnf install ansible -y
 
 #### Prueba de funcionamienta de Ansible
 ---
--Realizamos prueba de funcionamiento hacia otro servidor
+- Realizamos prueba de funcionamiento hacia otro servidor
 ```bash
 ansible -i IP_HOST_A,IP_HOST_B, all -m ping
 
 ```
--Vemos la configuracion de cada servidor
+- Vemos la configuracion de cada servidor
 ```bash
 ansible -i IP_HOST_A,IP_HOST_B, all -m setup
 
@@ -106,7 +113,7 @@ ansible -i IP_HOST_A,IP_HOST_B, all -m setup
 
 #### Estructura de Ansible
 ---
--Estructura de directorios Ansible
+- Estructura de directorios Ansible
 ```bash
 lansible.cfg
 ├── group_vars
