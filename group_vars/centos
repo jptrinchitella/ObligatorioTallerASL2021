@@ -1,0 +1,8 @@
+packages:
+- httpd
+- mariadb
+- mariadb-server
+
+services:
+- httpd
+- mariadb
