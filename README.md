@@ -9,7 +9,9 @@ Por ende; las ideas, resultados y las conclusiones a las que hemos llegado son d
 
 El contenido y la propiedad intelectual de la solución presentada, nos corresponde única y exclusivamente a los integrantes del presente grupo.
 
-[Carlos A. Marval](https://www.linkedin.com/in/carlos-marval-530b28183/)                            [Juan Pablo Trinchitella](https://www.linkedin.com/in/juan-pablo-trinchitella)
+* [Carlos A. Marval](https://www.linkedin.com/in/carlos-marval-530b28183/)
+
+* [Juan Pablo Trinchitella](https://www.linkedin.com/in/juan-pablo-trinchitella)
 
 # Introducción
 ---
