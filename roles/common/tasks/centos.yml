@@ -8,8 +8,8 @@
 - name: Install common dependencies
   yum: name={{ item }} state=present
   loop:
-  - libselinux-python
-  - libsemanage-python
+  - python3-libselinux.x86_64
+  - python3-libsemanage.x86_64
   - firewalld
 
 - name: Configure chrony file
