@@ -1,6 +1,6 @@
 # Obligatorio Taller ASL 2021
 Repositorio creado para el Obligatorio de Taller ASL, el cual se va a utilizar para trabajar de forma simultanea entre los integrantes del grupo para aprobar la materia Taller de Administracion de Servidores Linux.
-El obligatorio consiste en implementar una solucion para automatizar tareas con la herramienta [Ansible](https://www.ansible.com/), teniendo un servidor como bastion (controlador), luego desde este se van a crear playbooks para la automatizacion en 2 servidores con OS Linux, con las distribuciones CentOS y Ubuntu.
+El obligatorio consiste en implementar una solucion para automatizar tareas con la herramienta [Ansible](https://www.ansible.com/), teniendo un servidor como bastion (controlador), luego desde este se van a crear playbooks para la automatizacion en 2 servidores con OS Linux, con las distribuciones [CentOS](https://www.centos.org/) y [Ubuntu](https://ubuntu.com/).
 
 # Declaracion de autoría
 Nosotros: Carlos Marval, Juan Pablo Trinchitella; estudiantes de la [Universidad ORT Uruguay](https://www.ort.edu.uy/), en la Facultad de Ingeniería de la carrera [Analista en Infraestructura Informática](https://fi.ort.edu.uy/analista-en-infraestructura-informatica), declaramos que la solución propuesta del presente obligatorio es auténtica, original y que se han citado las fuentes correspondientes en cuanto a información complementaria se refiere.
