@@ -20,3 +20,4 @@
 - name: Start the ntp service
   service: name=ntpd state=started enabled=yes
   tags: ntp
+
