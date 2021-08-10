@@ -108,16 +108,46 @@ ansible -i IP_HOST_A,IP_HOST_B, all -m setup
 ---
 -Estructura de directorios Ansible
 ```bash
-lamp/
-  group_vars/
-    all/
-  roles/
-    apache/
-    common/
-   hosts/
-   LICENSE.md
-   README.md
-   site.yml
+lansible.cfg
+├── group_vars
+│   ├── all
+│   ├── centos
+│   ├── dbservers
+│   └── ubuntu
+├── img
+│   ├── CentOS_Particionado.png
+│   └── Ubuntu_Particionado.png
+├── inventario
+├── LICENSE
+├── README.md
+├── roles
+│   ├── common
+│   │   ├── handlers
+│   │   │   └── main.yml
+│   │   ├── tasks
+│   │   │   ├── centos.yml
+│   │   │   ├── main.yml
+│   │   │   └── ubuntu.yml
+│   │   └── templates
+│   │       ├── chrony.conf.j2
+│   │       └── ntp.conf.j2
+│   ├── db
+│   │   ├── handlers
+│   │   │   └── main.yml
+│   │   ├── tasks
+│   │   │   ├── centos.yml
+│   │   │   ├── main.yml
+│   │   │   └── ubuntu.yml
+│   │   └── templates
+│   │       └── my.cnf.j2
+│   └── web
+│       ├── tasks
+│       │   ├── copy_code.yml
+│       │   ├── install_httpd.yml
+│       │   └── main.yml
+│       └── templates
+│           └── index.php.j2
+└── site.ymlmp/
 
 ```
 
