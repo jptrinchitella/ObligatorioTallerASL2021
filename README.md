@@ -104,7 +104,22 @@ ansible -i IP_HOST_A,IP_HOST_B, all -m setup
 
 ```
 
+#### Estructura de Ansible
+---
+-Estructura de directorios Ansible
+```bash
+lamp/
+  group_vars/
+    all/
+  roles/
+    apache/
+    common/
+   hosts/
+   LICENSE.md
+   README.md
+   site.yml
 
+```
 
 ---
 
