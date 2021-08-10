@@ -6,4 +6,3 @@
 
  - include: centos.yml
    when: ansible_os_family == "RedHat"aybook contains common plays that will be run on all nodes.
-
