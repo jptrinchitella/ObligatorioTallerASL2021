@@ -103,6 +103,9 @@ ansible -i IP_HOST_A,IP_HOST_B, all -m ping
 ansible -i IP_HOST_A,IP_HOST_B, all -m setup
 
 ```
+
+
+
 ---
 
 ## License
