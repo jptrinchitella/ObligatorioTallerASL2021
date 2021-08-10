@@ -1,5 +1,5 @@
 
-ckages:
+packages:
 - apache2
 - mysql-server
 - mysql-client
