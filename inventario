@@ -7,3 +7,4 @@ ubuntu01 ansible_host=10.2.4.19
 [linux:children]
 centos
 ubuntu
+
