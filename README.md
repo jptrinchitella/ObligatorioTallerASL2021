@@ -162,7 +162,7 @@ ansible.cfg
 
 De este modo se muestra los resultados que debuele el Playbook ejecutado
 
-![Controladora Playbook](img/ControladoraPlaybook.jpg)
+![Controladora Playbook](img/ControladoraPlaybook.png)
 
 ---
 
