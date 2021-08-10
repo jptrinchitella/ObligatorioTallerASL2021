@@ -27,11 +27,22 @@
 - name: Start MariaDB Service
   service: name=mariadb state=started enabled=yes
 
-- name: Start firewalld
-  service: name=firewalld state=started enabled=yes
+- name: Allow everything and enable UFW
+  ufw:
+    state: enabled
+    policy: allow
 
-- name: insert firewalld rule
-  firewalld: port={{ mysql_port }}/tcp permanent=true state=enabled immediate=yes
+#- name: Start ufw
+#  service: name=ufw state=started enabled=yes
+
+- name: Allow all access to tcp port 80
+  ufw:
+    rule: allow
+    port: {{ mysql_port }}
+    proto: tcp
+
+#- name: insert ufw rule
+#  ufw: port={{ mysql_port }}/tcp permanent=true state=enabled immediate=yes
 
 - name: Create Application Database
   mysql_db: name={{ dbname }} state=present
