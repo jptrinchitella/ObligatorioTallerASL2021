@@ -2,10 +2,10 @@
 # This playbook will install MariaDB and create db user and give permissions.
 
 - name: Install MariaDB package
-  apt: name={{ item }} state=installed
-  with_items:
-   - mysql-server
-   - mysql-client
+  apt: name={{ item }} state=present
+  loop:
+  - mysql-server
+  - mysql-client
 
 #   - mariadb-server
 #   - MySQL-python

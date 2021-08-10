@@ -2,15 +2,15 @@
 # This playbook contains common plays that will be run on all nodes.
 
 - name: Install ntp
-  yum: name=ntp state=present
+  apt: name=ntp state=present
   tags: ntp
 
 - name: Install common dependencies
-  yum: name={{ item }} state=installed
-  with_items:
-   - libselinux-python
-   - libsemanage-python
-   - firewalld
+  apt: name={{ item }} state=present
+  loop:
+  - libselinux-python
+  - libsemanage-python
+  - ufw
 
 - name: Configure ntp file
   template: src=ntp.conf.j2 dest=/etc/ntp.conf

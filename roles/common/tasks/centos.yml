@@ -6,11 +6,11 @@
   tags: chrony
 
 - name: Install common dependencies
-  yum: name={{ item }} state=installed
-  with_items:
-   - libselinux-python
-   - libsemanage-python
-   - firewalld
+  yum: name={{ item }} state=present
+  loop:
+  - libselinux-python
+  - libsemanage-python
+  - firewalld
 
 - name: Configure chrony file
  # template: src=ntp.conf.j2 dest=/etc/ntp.conf
