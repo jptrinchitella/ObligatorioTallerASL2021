@@ -84,11 +84,26 @@ sudo dnf makecache
 sudo dnf install git -y
 
 ```
+
 -Instalar Ansible
 ```bash
 sudo dnf install ansible -y
 
 ```
+
+#### Prueba de funcionamienta de Ansible
+---
+-Realizamos prueba de funcionamiento hacia otro servidor
+```bash
+ansible -i IP_HOST_A,IP_HOST_B, all -m ping
+
+```
+-Vemos la configuracion de cada servidor
+```bash
+ansible -i IP_HOST_A,IP_HOST_B, all -m setup
+
+```
+---
 
 ## License
 [GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.html)
