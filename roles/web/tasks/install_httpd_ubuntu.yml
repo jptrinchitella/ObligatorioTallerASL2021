@@ -4,23 +4,20 @@
 - name: Install httpd and php
   yum: name={{ item }} state=present
   loop:
-   - httpd
-   - php.x86_64
-   - php-mysqlnd.x86_64
+   - apache2
+   - php
+   - php-mysql
 
 - name: Install web role specific dependencies
   yum: name={{ item }} state=present
   loop:
    - git
 
-- name: Start ufw
-  service: name=ufwd state=started enabled=yes
-
 - name: insert ufw rule for httpd
   ufw: rule=allow port={{ httpd_port }} proto=tcp
 
-- name: http service state
-  service: name=ufwd state=started enabled=yes
+- name: start ufw service state
+  service: name=ufw state=started enabled=yes
 
  #- name: Configure SELinux to allow httpd to connect to remote database
  # seboolean: name=httpd_can_network_connect_db state=true persistent=yes

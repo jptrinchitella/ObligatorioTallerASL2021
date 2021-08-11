@@ -16,6 +16,6 @@
   notify: restart ntp
 
 - name: Start the ntp service
-  service: name=ntpd state=started enabled=yes
+  service: name=ntp state=started enabled=yes
   tags: ntp
 
