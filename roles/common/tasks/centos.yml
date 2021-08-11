@@ -13,7 +13,6 @@
   - firewalld
 
 - name: Configure chrony file
- # template: src=ntp.conf.j2 dest=/etc/ntp.conf
   template: src=chrony.conf.j2 dest=/etc/crony.conf
   tags: chrony
   notify: restart chrony
